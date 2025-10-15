@@ -12,8 +12,6 @@ export default function SigninPage() {
   const supabase = createClient();
   const router = useRouter();
 
-  console.log("user info:", { email, password, message });
-
   async function handleAuth(event: React.FormEvent) {
     event.preventDefault();
     try {
@@ -34,7 +32,6 @@ export default function SigninPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 flex items-center justify-center p-4">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div
@@ -43,10 +40,8 @@ export default function SigninPage() {
         ></div>
       </div>
 
-      <div className="relative w-full max-w-md">
-        {/* Card */}
+      <div className="relative w-full max-w-2xl ">
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
-          {/* Header */}
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-8 text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 backdrop-blur-sm">
               <Sparkles className="w-8 h-8 text-white" />
@@ -57,10 +52,8 @@ export default function SigninPage() {
             </p>
           </div>
 
-          {/* Form */}
           <div className="p-8">
             <form className="space-y-6" onSubmit={handleAuth}>
-              {/* Message Display */}
               {message && (
                 <div className="bg-emerald-500/20 border border-emerald-500/50 rounded-xl p-4 backdrop-blur-sm">
                   <p className="text-emerald-200 text-sm text-center font-medium">
@@ -68,7 +61,7 @@ export default function SigninPage() {
                   </p>
                 </div>
               )}
-              {/* Email Input */}
+
               <div className="space-y-2">
                 <label
                   htmlFor="email"
@@ -88,12 +81,11 @@ export default function SigninPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="block w-full pl-10 pr-3 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-200 backdrop-blur-sm"
-                    placeholder="you@example.com"
+                    placeholder="user@example.com"
                   />
                 </div>
               </div>
 
-              {/* Password Input */}
               <div className="space-y-2">
                 <label
                   htmlFor="password"
@@ -118,7 +110,6 @@ export default function SigninPage() {
                 </div>
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 px-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900"
@@ -127,7 +118,6 @@ export default function SigninPage() {
               </button>
             </form>
 
-            {/* Toggle Button */}
             <div className="mt-6 text-center">
               <button
                 onClick={() => setIsSignUp((prev) => !prev)}
@@ -141,7 +131,6 @@ export default function SigninPage() {
           </div>
         </div>
 
-        {/* Footer text */}
         <p className="text-center text-white/60 text-xs mt-6">
           By continuing, you agree to our Terms of Service and Privacy Policy
         </p>

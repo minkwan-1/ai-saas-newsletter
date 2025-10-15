@@ -22,19 +22,14 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-emerald-900 to-slate-900 border-b border-white/10 shadow-lg backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo Section */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full shadow-lg">
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
-            <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              DearMe
-            </h1>
+            <h1 className="text-xl sm:text-2xl font-bold ">DearMe</h1>
           </div>
 
-          {/* User Section */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            {/* User Avatar */}
             <div className="flex items-center space-x-2 h-9 sm:h-10 px-3 sm:px-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/15 transition-colors">
               <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
@@ -44,7 +39,6 @@ export default function Navbar() {
               </span>
             </div>
 
-            {/* Logout Button */}
             <button
               onClick={handleLogout}
               className="inline-flex items-center justify-center space-x-1.5 sm:space-x-2 h-9 sm:h-10 px-3 sm:px-4 
