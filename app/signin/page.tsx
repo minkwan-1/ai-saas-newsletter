@@ -33,12 +33,12 @@ export default function SigninPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 flex items-center justify-center p-4">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -47,7 +47,7 @@ export default function SigninPage() {
         {/* Card */}
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 text-center">
+          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-8 text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 backdrop-blur-sm">
               <Sparkles className="w-8 h-8 text-white" />
             </div>
@@ -62,8 +62,8 @@ export default function SigninPage() {
             <form className="space-y-6" onSubmit={handleAuth}>
               {/* Message Display */}
               {message && (
-                <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-4 backdrop-blur-sm">
-                  <p className="text-green-200 text-sm text-center font-medium">
+                <div className="bg-emerald-500/20 border border-emerald-500/50 rounded-xl p-4 backdrop-blur-sm">
+                  <p className="text-emerald-200 text-sm text-center font-medium">
                     {message}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export default function SigninPage() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Mail className="h-5 w-5 text-purple-300" />
+                    <Mail className="h-5 w-5 text-emerald-300" />
                   </div>
                   <input
                     id="email"
@@ -87,7 +87,7 @@ export default function SigninPage() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="block w-full pl-10 pr-3 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 backdrop-blur-sm"
+                    className="block w-full pl-10 pr-3 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-200 backdrop-blur-sm"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function SigninPage() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Lock className="h-5 w-5 text-purple-300" />
+                    <Lock className="h-5 w-5 text-emerald-300" />
                   </div>
                   <input
                     id="password"
@@ -112,7 +112,7 @@ export default function SigninPage() {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="block w-full pl-10 pr-3 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 backdrop-blur-sm"
+                    className="block w-full pl-10 pr-3 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-200 backdrop-blur-sm"
                     placeholder="••••••••"
                   />
                 </div>
@@ -121,7 +121,7 @@ export default function SigninPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 px-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 {isSignUp ? "Create Account" : "Sign In"}
               </button>
@@ -131,7 +131,7 @@ export default function SigninPage() {
             <div className="mt-6 text-center">
               <button
                 onClick={() => setIsSignUp((prev) => !prev)}
-                className="text-purple-300 hover:text-purple-200 text-sm font-medium transition duration-200 underline decoration-dotted underline-offset-4"
+                className="text-emerald-300 hover:text-emerald-200 text-sm font-medium transition duration-200 underline decoration-dotted underline-offset-4"
               >
                 {isSignUp
                   ? "Already have an account? Sign In"
